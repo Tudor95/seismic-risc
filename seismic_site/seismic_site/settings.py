@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'seismic_site.apps.SeismicSiteConfig',
     'api.apps.ApiConfig',
     'map_app.apps.MapAppConfig',
-    'crispy_forms'
+    'crispy_forms',
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -93,7 +94,7 @@ DATABASES = {
         'NAME': 'risc_db',
         'USER': 'seism',
         'PASSWORD': 'seism',
-        'HOST': 'localhost',
+        'HOST': '192.168.99.100',
     }
 }
 
