@@ -1,6 +1,6 @@
 # Seismic Risc
 
-[![GitHub contributors](https://img.shields.io/github/contributors/code4romania/seismic-risc.svg?style=for-the-badge)](https://github.com/code4romania/seismic-risc/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/seismic-risc.svg?style=for-the-badge)](https://github.com/code4romania/seismic-risc/commits/master) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)
+[![Datree](https://s3.amazonaws.com/catalog.static.datree.io/datree-badge-20px.svg)](https://datree.io/?src=badge) [![GitHub contributors](https://img.shields.io/github/contributors/code4romania/seismic-risc.svg)](https://github.com/code4romania/seismic-risc/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/seismic-risc.svg)](https://github.com/code4romania/seismic-risc/commits/master) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
@@ -74,8 +74,14 @@ Create a virtual environment and activate it
 
 ```shell
 virtualenv venv
+```
+
+```shell
 # Linux/Mac:
 source venv/bin/activate
+```
+
+```powershell
 # Windows:
 \path\to\env\Scripts\activate
 ```
@@ -92,7 +98,7 @@ The application expects a Postgres database being set up. It is easy to do so us
 
 ```shell
 docker pull postgres
-docker run --name postgres-risc -e POSTGRES_USER=seism -e POSTGRES_PASSWORD=seism -e POSTGRES_DB=risc_db -p 5432:5432  postgres
+docker run -d --name postgres-risc -e POSTGRES_USER=seism -e POSTGRES_PASSWORD=seism -e POSTGRES_DB=risc_db -p 5432:5432  postgres
 ```
 
 Run the initial Django migrations

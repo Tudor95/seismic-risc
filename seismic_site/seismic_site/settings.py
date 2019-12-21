@@ -38,12 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'cms.apps.CmsConfig',
     'seismic_site.apps.SeismicSiteConfig',
-    'api.apps.ApiConfig',
     'map_app.apps.MapAppConfig',
+<<<<<<< HEAD
     'crispy_forms',
     'blog'
+=======
+    'buildings.apps.BuildingsConfig',
+    'crispy_forms',
+>>>>>>> 30e87ed7e8c41b2a8806c9b1ba5409c88d041c3a
 ]
 
 MIDDLEWARE = [
@@ -140,3 +145,11 @@ STATICFILES_DIRS = (
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_FAIL_SILENTLY = not DEBUG
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
