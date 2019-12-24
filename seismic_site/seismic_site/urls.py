@@ -23,9 +23,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    # API
-    path('api/v2/', include(('buildings.urls', 'buildings'), namespace='buildings-api')),
-
+    path('api/', include('api.urls')),
     path('jet/', include('jet.urls', 'jet')),
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
