@@ -1,5 +1,5 @@
 {% load staticfiles %} {% block css %}
-
+{% load i18n %}
 <link href="{% static '/css/map.css' %}" rel="stylesheet" type="text/css">
 <link href="https://openlayers.org/en/v5.3.0/css/ol.css" rel="stylesheet"
       type="text/css"> {% endblock %} {% block content %}
@@ -12,13 +12,13 @@
     <div class="collapse navbar-collapse navbar-category" id="navbarNav">
         <ul class="navbar-nav">
             <li class="filter-button" id="all">
-                <a class="nav-link" href="#">Toate clădirile cu risc seismic</a>
+                <a class="nav-link" href="#"> {% trans Toate clădirile cu risc seismic %}</a>
             </li>
 
             {% for category in used_categories %}
                 <li class="filter-button" id="{{ category }}">
                     <a class="nav-link" href="#">
-                        Clasa {{ category }} de risc seismic
+                        {% trans  Clasa {{ category }} de risc seismic %}
                     </a>
                 </li>
             {% endfor %}
